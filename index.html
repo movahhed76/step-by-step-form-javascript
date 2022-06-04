@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form id="#" class="form">
+      <h1>Register</h1>
+      <div class="progressbar">
+        <div class="progsess" id="progsess"></div>
+        <div class="progress-step progress-step-active" data-title="Intro">
+          1
+        </div>
+        <div class="progress-step" data-title="Contact">2</div>
+        <div class="progress-step" data-title="ID">3</div>
+        <div class="progress-step" data-title="Password">4</div>
+      </div>
+      <div class="form-step form-step-active">
+        <div class="input-group">
+          <label for="usename" id="lable">Usename:</label>
+          <input
+            type="text"
+            name="usename"
+            placeholder="usename"
+            class="inputed"
+          />
+        </div>
+        <div class="input-group">
+          <label for="position" id="lable">Position:</label>
+          <input
+            type="text"
+            name="position"
+            placeholder="position"
+            class="inputed"
+            value=""
+          />
+        </div>
+        <div>
+          <a href="#" class="btn btn-next">Next</a>
+        </div>
+      </div>
+
+      <div class="form-step">
+        <div class="input-group">
+          <label for="phone" id="lable">Phone:</label>
+          <input type="text" name="phone" placeholder="phone" class="inputed" value=""/>
+        </div>
+        <div class="input-group">
+          <label for="email" id="lable">Email:</label>
+          <input type="text" name="email" placeholder="email" class="inputed" value=""/>
+        </div>
+        <div class="btn-grop">
+          <a href="#" class="btn btn-prev">Prev</a>
+          <a href="#" class="btn btn-next">Next</a>
+        </div>
+      </div>
+
+      <div class="form-step">
+        <div class="input-group">
+          <label for="db" id="lable">Date of birthday:</label>
+          <input type="date" name="db" placeholder="db" class="inputed"value="" />
+        </div>
+        <div class="input-group">
+          <label for="id" id="lable">National Id:</label>
+          <input type="text" name="id" placeholder="id" class="inputed" value=""/>
+        </div>
+        <div class="btn-grop">
+          <a href="#" class="btn btn-prev">Prev</a>
+          <a href="#" class="btn btn-next">Next</a>
+        </div>
+      </div>
+
+      <div class="form-step">
+        <div class="input-group">
+          <label for="password" id="lable">Password:</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="password"
+            class="inputed"
+            value=""
+          />
+        </div>
+        <div class="input-group">
+          <label for="confirmpassword" id="lable">Password Confirm:</label>
+          <input
+            type="text"
+            name="confirmpassword"
+            placeholder="confirmpassword"
+            class="inputed"
+            value=""
+          />
+        </div>
+        <div class="btn-grop">
+          <a href="#" class="btn btn-prev">Prev</a>
+          <button class="btn" style="border: none">Submite</button>
+        </div>
+      </div>
+    </form>
+    <script src="steps.js"></script>
+  </body>
+</html>

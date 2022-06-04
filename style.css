@@ -1,0 +1,141 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(75, 17, 129);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.form{
+    background-color: rgb(243, 243, 243);
+    width: 400px;
+    border-radius: 5px;
+    border: 1px solid rgb(214, 214, 214);
+    box-shadow: 0 0 5px rgb(128, 128, 128);
+    padding: 10px;
+}
+.progressbar{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+}
+.progressbar::before , .progsess{
+    content: "";
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    height: 5px;
+    background-color: rgb(170, 170, 170);
+    
+}
+.progsess{
+    background-color: blueviolet;
+    width: 0%;
+    transition: 0.3s;
+}
+.progress-step{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(170, 170, 170);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+}
+.progress-step-active {
+    background-color: rgb(121, 78, 161);
+    
+}
+
+.progress-step::after{
+    content: attr(data-title);
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    font-size: 0.85rem;
+    color:rgb(170, 170, 170);
+    margin-right: 8px;
+}
+
+.form-step{
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    transform-origin: top;
+    animation: animate 0.5s;
+}
+@keyframes animate{
+    from{
+        transform: scale(1,0);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1,1);
+        opacity: 1;
+    }
+    }
+.form h1 {
+    color: rgb(79, 79, 150);
+    text-align: center;
+}
+.input-group{
+    display: flex;
+    flex-direction: column;
+}
+#lable{
+    color: blueviolet;
+    font-size: 18px;
+    margin: 20px 0;
+    font-weight: bold;
+
+}
+.inputed{
+    background-color: rgb(208, 174, 216);
+    padding: 10px;
+    height: 30px;
+    width: 100%;
+    border-radius: 4px;
+    color: blueviolet;
+    border:1px solid rgb(199, 149, 245);
+}
+.inputed.invalid{
+    border-color: red;
+}
+.inputed:focus{
+    outline: none;
+    border:1px solid rgb(161, 93, 224);
+}
+.btn-grop{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.btn{
+    background-color: rgb(192, 21, 214);
+    width: 70px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    float: right;
+    padding: 8px;
+    display: block;
+    margin: 30px 0;
+    box-shadow: 0 0 5px rgb(128, 128, 128);
+    border-radius: 3px;
+
+}
+.btn-prev{
+    margin-right: 20px;
+}
+.form-step-active{
+    display: block;
+}
